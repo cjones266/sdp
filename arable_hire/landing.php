@@ -29,9 +29,8 @@
 				</ul>
 			</div>
 		</nav>
-    <main class="container">
-    </header>
-    </main>
+    <header>
+</body>
 <footer>
   <div class="container">
     <div class="row">
@@ -39,5 +38,3 @@
     </div>
 </div>
 </footer>
-</body>
-</html>

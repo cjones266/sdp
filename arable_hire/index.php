@@ -1,40 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>ArableHire</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">
-				<img src="static/logo2.jpeg" alt="ArableHire Logo">
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Hire</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Advertise</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-    <header>
-</body>
-<footer>
-  <div class="container">
+<?php
+session_start();
+
+include "header.php";
+
+?>
+
+<!-- Log In adapted from: https://www.youtube.com/watch?v=BaEm2Qv14oU-->
+
+<div class="container-fluid">
     <div class="row">
-        <p>&copy; 2023 ArableHire.</p>
+        <div class="col-md-3 sidebar">
+            <section class ="index-login">
+                <div class="wrapper">
+                    <div class="index-login-signup form-block">
+                        <h4>SIGN UP</h4>
+                        <p>Don't have an account yet? Sign up here!</p>
+                        <form action="includes/signup.inc.php" method="post">
+                            <input type="text" name="uid" class="form-control mb-3" placeholder="Username">
+                            <input type="password" name="pwd" class="form-control mb-3" placeholder="Password">
+                            <input type="password" name="pwdRepeat" class="form-control mb-3" placeholder="Repeat Password">
+                            <input type="text" name="email" class="form-control mb-3" placeholder="E-mail">
+                            <button type="submit" name="submit">SIGN UP</button>
+                        </form>
+                    </div>
+                    <div class="index-login-login form-block">
+                        <h4>LOGIN</h4>
+                        <p>Already have an account? Log in here!</p>
+                        <form action="includes/login.inc.php" method="post">
+                            <input type="text" name="uid" class="form-control mb-3" placeholder="Username">
+                            <input type="password" name="pwd" class="form-control mb-3" placeholder="Password">
+                            <button type="submit" name="submit">LOGIN</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-9 main-content">
+            <main class="container">
+                <section class="index-login">
+                    <img src="static/IMG_4633.jpg" alt="Image Description">
+                </section>
+            </main>
+        </div>
     </div>
+    <?php
+    include "footer.php";
+    ?>
 </div>
-</footer>

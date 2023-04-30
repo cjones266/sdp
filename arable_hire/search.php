@@ -1,4 +1,4 @@
-<!-- created a seperate search class so that it can be pulled in to view and view link without interfering with results -->
+<!-- Search functionalities -->
 
 <div class search-bar-view>
 

@@ -44,7 +44,7 @@ include "config.php";
       }
 
       ?>
-    </div> <!-- Close the div with class "col-md-9" -->
-  </div> <!-- Close the div with class "row" -->
-</div> <!-- Close the div with class "container-fluid" -->
+    </div>
+  </div>
+</div>
 

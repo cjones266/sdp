@@ -9,10 +9,8 @@ include 'config.php';
 
 
 /*This page is used by the admin to manage all approved listings.
-This shows the listings once they have been approved (status=1 below).
+This shows the listings once they have been approved (status=1).
 All listings made by all users will show to be managed. 
-
-
 
 Logic to display the admin page only to admin user.
 Check if the user is logged in and if their user ID matches the admin ID.
@@ -28,7 +26,6 @@ echo "Error: You are not authorized to access this page.";
 include "footer.php";
 exit();
 }
-
 
 ?>
 

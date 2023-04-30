@@ -3,12 +3,7 @@ session_start();
 
 ?>
 
-<!-- form validation and verification.
-
-So far - added required to fields
-
--->
-
+<!-- form with validation -->
 
 <main class="container">
   <div class="col-md-9">

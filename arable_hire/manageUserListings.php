@@ -8,11 +8,8 @@ include "header.php";
 include 'config.php';
 
 // This page is for users to maintain the listings they have made.
-// This shows the listings once they have been approved (status=1 below) by the Admin.
+// It shows the listings once they have been approved (status=1) by the Admin.
 // Only listings made by the specific user will show.
-
-
-//<main>
 
 
 ?>

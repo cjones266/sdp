@@ -1,3 +1,5 @@
+<!-- Log In adapted from: https://www.youtube.com/watch?v=BaEm2Qv14oU-->
+
 <?php
 
 if(isset($_POST["submit"]))

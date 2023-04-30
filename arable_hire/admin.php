@@ -6,7 +6,7 @@ include 'config.php';
 
 ?>
 
-<!-- Logic to display the admin page only to admin user.
+<!-- Logic to display the admin page to admin user only.
 Check if the user is logged in and if their user ID matches the admin ID.
 If the user is not logged in or is not the admin, an error message is displayed and they cannot access the page. -->
 
@@ -38,11 +38,9 @@ If the user is not logged in or is not the admin, an error message is displayed 
       
       <?php
 
-      
       // Displays all submissions that have not been accepted or rejected
-      //Only selects submissions with a status on Pending (status=0)
-      // Therefore, once a submission is approved, its status will updated
-      // to status=1 and will no longer be in the query result.
+      // Only selects submissions with a status Pending (status=0)
+      // Therefore, once a submission is approved, its status will update to status=1 and will no longer be in the query result.
       
       $query = "SELECT id, name, category, description, county, image, cost, start_date, end_date, email, status FROM advertisements WHERE status = 0";
       $result = mysqli_query($conn, $query);

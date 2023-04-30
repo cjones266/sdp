@@ -39,7 +39,7 @@
                 <li><a href="#"><?php echo $_SESSION["useruid"]; ?></a></li>
                 <li><a href="includes/logout.inc.php" class="header-login-a">Logout</a></li>
                 <?php
-                // Checks if user is an admin, if yes displays the Dashboard button.
+                // Checks if user is an admin, if so displays the Dashboard button.
                 if($_SESSION["userid"] == "2") {
                     ?>
                     <li><a href="admin.php">Dashboard</a></li>

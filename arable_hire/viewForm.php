@@ -66,7 +66,7 @@ include "config.php";
                   echo '<tr><td><strong>County:</strong></td><td>' . $row['county'] . '</td></tr>';
                   echo '<tr><td><strong>Available From:</strong></td><td>' . $row['start_date'] . '</td></tr>';
                   echo '<tr><td><strong>Available Until:</strong></td><td>' . $row['end_date'] . '</td></tr>';
-                  echo '<tr><td><strong>Cost:</strong></td><td>' . $row['cost'] . '</td></tr>';
+                  echo '<tr><td><strong>Daily Cost:</strong></td><td>' . $row['cost'] . '</td></tr>';
                   echo '<tr><td><strong>Email:</strong></td><td>' . $row['email'] . '</td></tr>';
                   echo '<tr><td><strong>Image:</strong></td><td><img src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" style="width:350px; height:350px;" /></td>';
                   echo '</tbody>';
@@ -75,37 +75,6 @@ include "config.php";
               } else {
                 echo "Form not found.";
               }
-
-            /* old version
-            // If no new search term is specified, display the full form from the database based on the ID of the form that was clicked
-            $id = $_GET['id'];
-            $forms = "SELECT name, category, description, county, start_date, end_date, cost, email, image FROM advertisements WHERE id = $id";
-            $result = $conn->query($forms);
-            // Display the full form on the PHP page
-            if ($result->num_rows > 0) {
-                // Loop through each result and create a table row for each one
-                while($row = $result->fetch_assoc()) {
-                    // Display the form fields using HTML table rows
-                    echo '<table class="table table-striped">';
-                    echo '<thead><tr><th colspan="2">' . $row['title'] . '</th></tr></thead>';
-                    echo '<tbody>';
-                    echo '<tr><td>Description:</td><td>' . $row['description'] . '</td></tr>';
-                    // Loop through the form fields and add a table row for each one
-                    foreach ($row as $key => $value) {
-                        if ($key != 'id' && $key != 'title' && $key != 'description' && $key != 'image') {
-                            echo '<tr><td>' . $key . ':</td><td>' . $value . '</td></tr>';
-                        }
-                        if ($key == 'image') {
-                            echo '<tr><td>Image:</td><td><img src="data:image/jpeg;base64,'.base64_encode($value).'" /></td></tr>';
-                        }                    
-                    }                    
-                    echo '</tbody>';
-                    echo '</table>';
-                }
-            } else {
-                echo "Form not found.";
-            }
-            */
 
         }
         ?>

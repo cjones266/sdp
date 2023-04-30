@@ -1,0 +1,282 @@
+.cell {
+  max-width: 103px;
+  max-height: 50px;
+  overflow: scroll;
+  }
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-title {
+  margin-left: 0px;
+}
+.menu-member {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.nav-link {
+  font-size: 22px;
+  justify-content: space-evenly;
+  }
+
+
+.navbar-logo {
+  margin-right: 20px;
+}
+
+.navbar-title {
+  margin-right: auto;
+}
+
+.nav-link {
+  margin-left: 20px;
+}
+
+
+.navbar-nav {
+  width: 70%;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height:75px;
+}
+
+
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+  
+.form-container label {
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+.form-container input[type=text], 
+.form-container input[type=email], 
+.form-container input[type=file] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+  
+  .form-container input[type=checkbox] {
+    margin-left: 10px;
+}
+  
+.form-container input[type=submit] {
+    background-color: #878a87;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.form-container input[type=submit]:hover {
+    background-color: #b0abab;
+}
+
+/*listing form */
+  .form-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #c6c5c5;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+  }
+
+
+
+.search-bar-view {
+  background-color: #c6c5c5;
+}
+
+
+  .location-list {
+    height: 100px;
+    overflow: scroll;
+  }
+
+  
+  .category-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .category {
+    display: flex;
+    align-items: center;
+  }
+
+  .col-md-9 {
+    display: inline-block;
+  }
+
+
+  .col-md-12 {
+    display: inline-block;
+  }
+  
+  
+  .form-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+
+main.container {
+    max-width: none;
+    width: 100%;
+    padding: 20px;
+}
+
+
+footer .container {
+    width: 100%;
+    max-width: none;
+    padding-left: 30px;
+  }
+
+  .footer {
+    background-color: #f2f2f2;
+}
+
+
+/* changes dimensions of main index image */
+  .index-login img {
+    width: 100%;
+    height: 20%;
+  }
+  
+
+  .container-fluid {
+    padding: 20px; 
+    display: inline-block;
+
+  }
+
+  .row {
+    height: 100%;
+  }
+  
+  .sidebar {
+    height: 100%;
+  }
+  
+  .main-content {
+    display: inline-block;
+  }
+  
+  .form-block {
+    background-color: #f5f5f5;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  
+  .form-block h4 {
+    margin-top: 0;
+  }
+  
+  .form-block p {
+    margin-bottom: 10px;
+  }
+  
+  .form-block input[type="text"],
+  .form-block input[type="password"],
+  .form-block button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-block button {
+    background-color: #ff0800;
+    border: none;
+    color: #0a29d6;
+    padding: 200px;
+    cursor: pointer;
+  }
+  
+  .form-block button:hover {
+    background-color: #0062cc;
+  }
+  
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+
+  .form-field {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+ .results-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-display {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 10px;
+    background-color: #fffcfc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-display a {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.grid-display img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+thead th,
+tbody td {
+  width: 50px;
+  word-wrap: break-word;
+}

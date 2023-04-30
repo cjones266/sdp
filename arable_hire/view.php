@@ -76,35 +76,10 @@ if ($result->num_rows > 0) {
       // Close the database connection
       $conn->close();
       ?>
-    </div> <!-- Close the div with class "col-md-9" -->
-  </div> <!-- Close the div with class "row" -->
-</div> <!-- Close the div with class "container-fluid" -->
+    </div>
+  </div>
+</div>
 
 <?php
 include "footer.php";
 ?>
-
-
-<!--
-
-table version
-
-      if ($result->num_rows > 0) {
-        // Output the table header
-        echo '<table class="table table-striped">';
-        echo '<thead><tr><th>Search Results</th></tr></thead>';
-        
-        // Loop through each result and output it as a table row
-        while ($row = $result->fetch_assoc()) {
-          echo '<tr>';
-          echo '<td><a href="viewForm.php?id=' . $row['id'] . '">' . $row['name'] . '<br><img src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" width="100" height="00" /></a></td>';
-          echo '</tr>';
-        }
-        
-        // Output the table footer
-        echo '</table>';
-      } else {
-        echo "No listings found.";
-      }
-
-    -->

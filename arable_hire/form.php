@@ -2,9 +2,7 @@
 session_start();
 
 ?>
-
 <!-- form with validation -->
-
 <main class="container">
   <div class="col-md-9">
     <div class="form-container">

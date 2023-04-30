@@ -10,7 +10,6 @@ include "header.php";
 include "config.php";
 
 ?>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">

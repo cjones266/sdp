@@ -22,7 +22,6 @@ If the user is not logged in or is not the admin, an error message is displayed 
     exit();
 }
 ?>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">

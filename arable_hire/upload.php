@@ -72,7 +72,7 @@ if (!isset($_SESSION['userid'])) {
               if (mysqli_query($conn, $sql)) {
                 // JS alert box to display success or error message
                 $message = "Advertisement created successfully. Your advertisement will be reviewed by an Admin. You can view the status of your submission in your account.";
-                $redirect_url = "http://localhost/webappv1/index.php";
+                $redirect_url = "http://localhost/arable_hire/index.php";
               } else {
                 $message = "Error uploading data: " . mysqli_error($conn);
               }
@@ -86,7 +86,7 @@ if (!isset($_SESSION['userid'])) {
             
             if (mysqli_query($conn, $sql)) {
               $message = "Advertisement created successfully. Your advertisement will be reviewed by an Admin. You can view the status of your submission in your account.";
-              $redirect_url = "http://localhost/webappv1/index.php";
+              $redirect_url = "http://localhost/arable_hire/index.php";
             } else {
               $message = "Error uploading data: " . mysqli_error($conn);
             }

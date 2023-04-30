@@ -9,9 +9,7 @@ include "header.php";
 // Include database connection code
 include "config.php";
 
-
 ?>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">

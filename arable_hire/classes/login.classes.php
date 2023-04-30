@@ -48,10 +48,6 @@ class Login extends Dbh {
             session_start();
             $_SESSION["userid"] = $userData[0]["users_id"];
             $_SESSION["useruid"] = $userData[0]["users_uid"];
-            
-            // Optional code - redirect to desired page?
-            //header("Location: ../landing.php");
-            //exit();
 
             $stmt = null;
 

@@ -11,9 +11,7 @@ include 'config.php';
 // It shows the listings once they have been approved (status=1) by the Admin.
 // Only listings made by the specific user will show.
 
-
 ?>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
@@ -38,7 +36,6 @@ include 'config.php';
                         echo "Error: " . mysqli_error($conn);
                     }
                 }
-
 
 // Fetch all approved submissions made under this used ID.
 //$query = "SELECT id, name, email, image, category, status FROM advertisements WHERE user_id = '$users_id' AND status = 1";

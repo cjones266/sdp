@@ -7,17 +7,15 @@ $users_id = $_SESSION['userid'];
 include "header.php";
 include 'config.php';
 
+/* This page is used by Admin to manage all approved advertisements.
+The page shows advertisements made by all users once they have been approved (status=1).
 
-/*This page is used by the admin to manage all approved listings.
-This shows the listings once they have been approved (status=1).
-All listings made by all users will show to be managed. 
-
-Logic to display the admin page only to admin user.
+Logic to display the page to Admin user only:
 Check if the user is logged in and if their user ID matches the admin ID.
-If the user is not logged in or is not the admin, an error message is displayed and they cannot access the page.*/
+If the user is not logged in or if User is not the Admin, an error message is displayed and they cannot access the page.*/
 
 if (isset($_SESSION['userid']) && $_SESSION['userid'] == "2") {
-    // Display content for the user with ID 2
+// Display content for the user with ID 2 (Admin)
 } else {
 // Display an error message
 
@@ -43,10 +41,10 @@ exit();
                 // Handle submission deletion
                 if (isset($_POST['delete'])) {
                     $id = $_POST['id'];
-                    // Delete the submission from the database
+                    // Delete the advertisement from the database
                     $query = "DELETE FROM advertisements WHERE id = $id";
                     $result = mysqli_query($conn, $query);
-                    // Check if the query was successful
+                    // Check if removal of advertisement was successful
                     if ($result) {
                         echo "Listing $id has been deleted.";
                     } else {
@@ -55,10 +53,9 @@ exit();
                 }
 
 
-// Fetch all approved submissions.
+// Fetch all approved submissions from the database and display them in a table
 
 $query = "SELECT id, name, category, description, county, image, cost, start_date, end_date, email, status FROM advertisements WHERE status = 1";
-//$query = "SELECT id, name, email, image, category, status FROM advertisements WHERE status = 1";
 $result = mysqli_query($conn, $query);
 ?>
 

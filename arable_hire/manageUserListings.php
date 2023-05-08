@@ -7,9 +7,9 @@ $users_id = $_SESSION['userid'];
 include "header.php";
 include 'config.php';
 
-// This page is for users to maintain the listings they have made.
-// It shows the listings once they have been approved (status=1) by the Admin.
-// Only listings made by the specific user will show.
+/* This page is for users to maintain the advertisements they have made.
+
+The page shows advertisements made by each individual user only. */
 
 ?>
 <div class="container-fluid">
@@ -23,13 +23,13 @@ include 'config.php';
             <h3>Manage Your Listings</h3>
             <table class="table">
                 <?php
-                // Handle submission deletion
+                // Handle advertisement deletion
                 if (isset($_POST['delete'])) {
                     $id = $_POST['id'];
-                    // Delete the submission from the database
+                    // Delete the advertisement from the database
                     $query = "DELETE FROM advertisements WHERE id = $id";
                     $result = mysqli_query($conn, $query);
-                    // Check if the query was successful
+                    // Check if removal of advertisement was successful
                     if ($result) {
                         echo "Listing $id has been deleted.";
                     } else {
@@ -37,14 +37,10 @@ include 'config.php';
                     }
                 }
 
-// Fetch all approved submissions made under this used ID.
-//$query = "SELECT id, name, email, image, category, status FROM advertisements WHERE user_id = '$users_id' AND status = 1";
-// Fetch all submissions made under this user ID
-
+// Fetch all advertisements made under this user ID from the database and display them in a table
 $query = "SELECT id, name, category, description, county, image, cost, start_date, end_date, email, status FROM advertisements WHERE user_id = '$users_id'";
 $result = mysqli_query($conn, $query);
 ?>
-
 
     <thead>
         <tr>

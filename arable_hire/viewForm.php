@@ -1,12 +1,11 @@
 <?php
 
-// No logic required as page is visible to all users to browse.
+// This page displays the full information of an item of machinery once it is selected from the preview grid in view.php.
 
 session_start();
 
 include "header.php";
 
-// Include database connection code
 include "config.php";
 
 ?>
@@ -51,11 +50,10 @@ include "config.php";
             $forms = "SELECT name, category, description, county, start_date, end_date, cost, email, image FROM advertisements WHERE id = $id";
             $result = $conn->query($forms);
             
-            // Display the full form on the PHP page
+            // Display the full advertisement in a table
             if ($result->num_rows > 0) {
-                // Loop through each result and create a table row for each one
+                // Loop through each result and create a table row for each field of the advertisement
                 while($row = $result->fetch_assoc()) {
-                  // Display the form fields using HTML table rows
                   echo '<table class="table table-striped">';
                   echo '<tbody>';
                   echo '<tr><td><strong>Name:</strong></td><td>' . $row['name'] . '</td></tr>';

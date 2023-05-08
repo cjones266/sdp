@@ -34,23 +34,24 @@
         <ul class="navbar-nav ml-auto menu-member">
             <?php
             if(isset($_SESSION["userid"])) {
-                // User logged in
+                // Display the name of user logged in and the Logout button in the header.
                 ?>
                 <li><a href="#"><?php echo $_SESSION["useruid"]; ?></a></li>
                 <li><a href="includes/logout.inc.php" class="header-login-a">Logout</a></li>
                 <?php
-                // Checks if user is an admin, if so displays the Dashboard button.
+                // If user logged in is Admin display the 'Dashboard' option in the header.
                 if($_SESSION["userid"] == "2") {
                     ?>
                     <li><a href="admin.php">Dashboard</a></li>
                     <?php
                 } else {
+                    // Else display the 'Manage' option for all other users in the header.
                     ?>
                     <li><a href="manageUserListings.php">Manage</a></li>
                     <?php
                 }
             } else {
-                // User is not logged in
+                // If User is not logged in, display the Sign Up and Login options in the header.
                 ?>
                 <li><a href="index.php">Sign Up</a></li>
                 <li><a href="index.php" class="header-login-a">Login</a></li>

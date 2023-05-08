@@ -6,16 +6,17 @@ include 'config.php';
 
 ?>
 
-<!-- Logic to display the admin page to admin user only.
-Check if the user is logged in and if their user ID matches the admin ID.
-If the user is not logged in or is not the admin, an error message is displayed and they cannot access the page. -->
+<!-- This page is used by Admin to review all pending advertisement listings.
+
+Logic to display the Admin dashboard to Admin user only:
+Checks if the user is logged in and if their user ID matches the Admin ID.
+If the user is not logged in or if the user logged in is not Admin, an error message is displayed and access is not permitted. -->
 
 <?php
     if (isset($_SESSION['userid']) && $_SESSION['userid'] == "2") {
-    // Display content for the user with ID 2
+    // Display content for user ID 2 (Admin)
     } else {
     // Display an error message
-
     echo "Error: You are not authorized to access this page.";
 
     include "footer.php";
@@ -37,9 +38,9 @@ If the user is not logged in or is not the admin, an error message is displayed 
       
       <?php
 
-      // Displays all submissions that have not been accepted or rejected
-      // Only selects submissions with a status Pending (status=0)
-      // Therefore, once a submission is approved, its status will update to status=1 and will no longer be in the query result.
+      // Display all pending submissions on Admin dashboard:
+      // SQL query selects submissions with status Pending (status=0).
+      // Once a submission is approved or rejected, its status will update and will no longer be in the query result.
       
       $query = "SELECT id, name, category, description, county, image, cost, start_date, end_date, email, status FROM advertisements WHERE status = 0";
       $result = mysqli_query($conn, $query);
@@ -74,6 +75,7 @@ If the user is not logged in or is not the admin, an error message is displayed 
             <td class="cell"><?php echo $row['email']; ?></td>
             <td class="cell"><?php echo $row['status'] == 1 ? 'Approved' : 'Pending'; ?></td>
             <td>
+              <!-- Approve or reject advertisements -->
               <form action="approve.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                 <button type="submit" name="action" value="approve">Approve</button>

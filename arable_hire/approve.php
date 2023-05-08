@@ -1,4 +1,4 @@
-<!-- Used by Admin to approve or reject listings -->
+<!-- This page is by used by admin.php to approve or reject advertisements -->
 
 <?php
 include 'config.php';
@@ -18,7 +18,7 @@ if ($action == 'approve') {
 // Execute the query
 $result = mysqli_query($conn, $query);
 
-// Redirect to admin.php once submission has been approved or rejected to see the remaining submissions for approval.
+// Redirect to admin.php once advertisement has been approved or rejected to see the remaining advertisements for approval.
 header("Location: admin.php");
 exit();
 
